@@ -36,7 +36,7 @@ public class SkillsController {
 
         return "<html>" +
                 "<body>" +
-                "<form action='/form' method='post'>" +
+                "<form action='/form_submission' method='post'>" +
                 "<div>Name:</div>" +
                 "<input type='text' name='name'>" +
                 "<div></div>" +
@@ -56,7 +56,7 @@ public class SkillsController {
                 "</html>";
     }
 
-    @PostMapping("form")
+    @PostMapping("form_submission")
     public String formPost(@RequestParam String name, @RequestParam String language1, @RequestParam String language2, @RequestParam String language3){
         if(name.equals("")){
             name="Anonymous User";
